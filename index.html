@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Список фильмов</title>
+
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="film-wrapper">
+      <h1 class="page-title">Форма</h1>
+      <form id="film-form">
+        <div class="name-block">
+          <label for="title">Название:</label><br />
+          <input class="form__input" type="text" id="title" name="title" /><br />
+        </div>
+        <div class="genre-block">
+          <label for="genre">Жанр:</label><br />
+          <input class="form__input" type="text" id="genre" name="genre" /><br />
+        </div>
+        <div class="release-block">
+          <label for="releaseYear">Год:</label><br />
+          <input class="form__input" type="number" id="releaseYear" name="releaseYear" /><br />
+        </div>
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="isWatched" name="isWatched" />
+          <label for="isWatched">Успели посмотреть?</label><br />
+        </div>
+        <button type="submit" id="submitButton" class="btn btn-primary form-btn">Добавить</button>
+        <button type="button" id="cancelButton" class="btn btn-warning" style="display:none;">Отменить</button>
+      </form>
+      <!-- select sort -->
+      <div class="select-wrapper">
+        <select name="sorting" id="sorting" class="sort-select">
+          <option value="">Выберите критерий сортировки</option>
+          <option value="title">Название</option>
+          <option value="genre">Жанр</option>
+          <option value="year">Год</option>
+        </select>
+        <button type="button" id="sortBtn" class="btn btn-info sort-btn">Сортировать</button>
+        <span id="sortDirectionIndicator"></span>
+      </div>
+      <!-- таблица -->
+      <h2 class="page-title">Список фильмов</h2>
+<div class="container-fluid">
+  
+</div>
+<div class="table-wrapper table-responsive">
+  <table id="film-table" class="table table-dark table-striped">
+        <thead>
+          <tr class="table-dark">
+            <th class="table-dark col">Название</th>
+            <th class="table-dark col">Жанр</th>
+            <th class="table-dark col">Год</th>
+            <th class="table-dark col">Успели посмотреть?</th>
+            <th class="table-dark col">Действие</th>
+          </tr>
+        </thead>
+        <tbody id="film-tbody" class="table-group-divider">
+          <!-- Здесь будут отбражаться добавленные фильмы (tr) -->
+        </tbody>
+
+
+      </table>
+</div>
+    
+    </div>
+  </div>
+  <!-- bootstrap script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
