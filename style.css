@@ -1,0 +1,211 @@
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* -------------------------------STYLES */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f99595;
+    padding: 30px;
+    color: #333;
+    transition: all 0.3s linear;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #999;
+    background-color: #fff;
+}
+
+form label {
+    display: block;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #999;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.page-title {
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form__input:hover {
+    background-color: rgb(213, 228, 250);
+    transition: all 0.3s ease-in;
+}
+
+.form__input:focus {
+    background-color: rgb(204 242 255);
+}
+
+.error-message {
+    display: block;
+    padding-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.form-btn {
+    width: 155px;
+}
+
+.film-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.select-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sort-select {
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px #999;
+    border-radius: 8px;
+}
+
+#cancelButton {
+    width: 155px;
+    border-radius: 10px;
+    background-color: #ffdc41;
+}
+
+.table-adaptive {
+    overflow-x: auto;
+}
+
+@media(max-width: 700px) {
+    body {
+        padding: 10px;
+    }
+
+    .page-title {
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    form {
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+}
